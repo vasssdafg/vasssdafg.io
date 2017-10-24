@@ -1,0 +1,16 @@
+
+端口
+netstat -ano |findstr  ":80"
+netstat -ntlp |grep 80
+netstat -anop
+
+解压
+tar zxvf   .gz
+unzip  .zip
+
+ps -ef |grep nginx
+
+cat /proc/cpuinfo/ | wc -l
+kill -9
+lsof -i:80
+lsof -a -u root -d txt
