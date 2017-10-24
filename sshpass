@@ -1,0 +1,14 @@
+set -xe
+	sshpass -p '5n0wbIrd' rsync -arvz --delete --exclude-from=/etc/exclude.list -e 'ssh -oUserKnownHostsFile=/dev/null -oStrictHostKeyChecking=no -p 22' /alidata/server/tomcat-7.0.54/webapps/Reptile/ root@118.119.102.36:/alidata/server/tomcat-7.0.54/webapps/Reptile/
+set +xe
+
+
+
+set -xe
+sshpass -p '5n0wbIrd' ssh -oUserKnownHostsFile=/dev/null -oStrictHostKeyChecking=no -p 22 -o StrictHostKeyChecking=no root@118.119.102.36 <<EOF
+	
+	/etc/init.d/tomcat7 stop
+	rm /var/run/tomcat.lock
+	/etc/init.d/tomcat7 start
+EOF
+set +xe
