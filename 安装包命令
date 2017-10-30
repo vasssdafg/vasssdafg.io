@@ -1,0 +1,21 @@
+yum search java|grep jdk
+
+yum install java-1.6.0-openjdk.x86_64
+http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25-linux-i586.rpm
+
+安装Java
+jre
+sudo yum install java-1.7.0-openjdk
+Jdk
+sudo yum install java-1.7.0-openjdk-devel
+
+查看java包
+rpm -qa | grep jdk
+
+卸载安装包
+rpm -e --nodeps javapackages-tools-3.4.1-11.el7.noarch
+
+卸载java
+yum -y remove java java-1.7.0-openjdk-devel.x86_64
+
+
